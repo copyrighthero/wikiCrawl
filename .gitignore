@@ -1,0 +1,22 @@
+# JetBrians Files
+**/.idea/*
+
+# Regular Files
+**/*.log
+**/*.env
+**/*.key
+**/*.conf
+**/*.ini
+
+# NodeJS Files
+**/node_modules/*
+
+# Python Files
+**/bin/*
+**/include/*
+**/lib/*
+**/share/*
+**/__pycache__/*
+**/lib64
+**/pip-selfcheck.json
+**/pyvenv.cfg
