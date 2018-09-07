@@ -56,7 +56,7 @@ const wikipediaRevision = title => new Promise((resolve, reject) => {
       body = JSON.parse(body);
       const [page] = body.query.pages;
       resolve(page.missing ? '' : (
-        !page.revisions.length ? '' :
+        !(page.revisions && page.revisions.length) ? '' :
         page.revisions.pop().slots.main.content.replace(/\s+/g, ' ')
       ));
     } else {
