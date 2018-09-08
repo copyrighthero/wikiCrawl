@@ -150,14 +150,14 @@ void (async (filePath = './config.ini') => {
     // record current title
     ledger.add(title);
   }
+
+  await storage.leveldb.close();
 })().then(() => {
   // successful operation
   console.log('Information collected.');
-  storage.leveldb.close();
   process.exit(0);
 }, error => {
   // failed operation
   console.error('Error encountered.', error);
-  storage.leveldb.close();
   process.exit(1);
 });
